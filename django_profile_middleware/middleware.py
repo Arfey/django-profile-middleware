@@ -39,7 +39,7 @@ class ProfilerMiddleware(object):
             for output in settings.PROFILER.get('output', ['console','file']):
                 
                 if output == 'console':
-                    print s.getvalue()
+                    print(s.getvalue())
 
                 if output == 'file':
                     file_loc = settings.PROFILER.get('file_location', 'profiling_results.txt')
